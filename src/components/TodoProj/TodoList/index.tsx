@@ -6,7 +6,18 @@ const TodoList = ({ todos }: { todos: TodoStore }) => {
 	return (
 		<ul>
 			{todos.list.map((t: Todo) => (
-				<li key={t.id}>{t.title}</li>
+				<li
+					style={{ textDecoration: t.isDone ? "line-through" : "" }}
+					onClick={() => todos.toggle(t)}
+					key={t.id}
+				>
+					{t.title}
+					{t.isDone ? (
+						<button onClick={() => todos.remove(t)}>Remove</button>
+					) : (
+						""
+					)}
+				</li>
 			))}
 		</ul>
 	)
