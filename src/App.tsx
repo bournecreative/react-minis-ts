@@ -3,11 +3,11 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import { HomeOutlined } from "@ant-design/icons"
 import { Index } from "./Index/index"
 import { TodoProj } from "./Projects/TodoProj"
-import "antd/dist/antd.css"
+import "antd/dist/antd.min.css"
 
 function App() {
 	return (
-		<>
+		<div style={{ padding: "0 20px" }}>
 			<BrowserRouter>
 				<div>
 					<Link to={"/"}>
@@ -20,7 +20,7 @@ function App() {
 					<Route path="todo-list" element={<TodoProj />} />
 				</Routes>
 			</BrowserRouter>
-		</>
+		</div>
 	)
 }
 

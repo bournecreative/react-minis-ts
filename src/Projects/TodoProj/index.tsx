@@ -6,7 +6,7 @@ const todos = new TodoStore()
 
 export const TodoProj: React.FC = (): JSX.Element => {
 	return (
-		<div>
+		<div style={{ padding: "20px 10px" }}>
 			<TodoInput todos={todos} />
 			<TodoList todos={todos} />
 		</div>
